@@ -15,6 +15,13 @@ The KIT_PSC3M6_CC1 library includes the following:
 * API documentation
 
 ### What Changed?
+
+#### v1.1.0
+* Updated template to 1.1.0 and DSL to v1.1.0
+
+#### v1.0.0
+* Initial release
+
 #### v0.5.0
 * Initial pre-production release
 
@@ -23,10 +30,10 @@ This version of the KIT_PSC3M6_CC1 BSP was validated for compatibility with the 
 
 | Software and Tools                        | Version |
 | :---                                      | :----:  |
-| ModusToolbox™ Software Environment        | 3.8.0   |
+| ModusToolbox™ Software Environment        | 3.9.0   |
 | GCC Compiler                              | 14.2.1  |
 
-Minimum required ModusToolbox™ Software Environment: v3.6.0
+Minimum required ModusToolbox™ Software Environment: v3.8.0
 
 ### More information
 * [KIT_PSC3M6_CC1 BSP API Reference Manual][api]

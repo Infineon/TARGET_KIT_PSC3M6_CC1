@@ -1,6 +1,6 @@
 {
     "core": {
-        "version": "1.0.0.451"
+        "version": "1.1.0.571"
     },
     "opt": {
         "props": {
@@ -34,15 +34,15 @@
                 "usb_host"
             ],
             "dependencies": {
-                "core-lib": "release-v1.7.0",
-                "core-make": "release-v3.8.0",
-                "mtb-dsl-psc3m6": "release-v1.0.0"
+                "core-lib": "release-v1.8.0",
+                "core-make": "release-v3.10.0",
+                "mtb-dsl-psc3m6": "release-v1.1.0"
             },
             "flow_version": "2.0",
             "min_tools": "3.7.0",
             "template": {
                 "id": "mtb-template-psc3m6",
-                "version": "release-v1.0.4"
+                "version": "release-v1.1.0"
             }
         }
     }

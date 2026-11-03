@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file startup_cat1b.h
-* \version 1.1
+* \version 1.2
 *
 * \brief Common startup header file for PSC3 devices. This file provides
 * declarations for secure and non-secure vector table.
@@ -30,6 +30,9 @@
 
 #include "cy_device_headers.h"
 
+#if defined(__cplusplus)
+extern "C" {
+#endif
 
 typedef void (* cy_israddress_cat1b)(void);   /**< Type of ISR callbacks */
 
@@ -50,9 +53,6 @@ typedef void (* cy_israddress_cat1b)(void);   /**< Type of ISR callbacks */
     extern cy_israddress_cat1b __ns_vector_table_rw[VECTORTABLE_SIZE] __attribute__( ( section(".ram_vectors"))) __attribute__((aligned(VECTORTABLE_ALIGN)));
 #endif
 #elif defined (__ICCARM__)
-    #if defined(CY_DEVICE_PSC3) || defined (CY_DEVICE_PSC3M6)
-        extern int main(void);
-    #endif
     #if defined(CY_PDL_TZ_ENABLED)
         extern cy_israddress_cat1b __s_vector_table_rw[VECTORTABLE_SIZE]  __attribute__( ( section(".intvec_ram"))) __attribute__((aligned(VECTORTABLE_ALIGN)));
     #else
@@ -61,5 +61,9 @@ typedef void (* cy_israddress_cat1b)(void);   /**< Type of ISR callbacks */
 #else
     #error "An unsupported toolchain"
 #endif  /* (__ARMCC_VERSION) */
+
+#if defined(__cplusplus)
+}
+#endif
 
 #endif /* STARTUP_CAT1B_H_ */
